@@ -31,6 +31,10 @@ If you wish to make changes you can issue a PR or redistribute a fork.
 Potential extensions to this toolbox that can be implemented in the future
 are recorded in the file [`TODO.md`](https://github.com/ess3sq/test-beam/blob/master/TODO.md).
 
+## Examples
+
+Examples unit tests can be viewed in the [`examples/`](examples/) directory.
+
 ## Usage
 
 ## Inclusion
