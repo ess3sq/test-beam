@@ -148,3 +148,25 @@ values as undefined.
 
 
 **3. Internal Functions**
+
+The following macros are used in the implementation, which means they are
+not intended to be used without the macro wrappers:
+
+* `bool beam_assert(bool cond, char *str)` - asserts whether the `bool`
+  value of `cond` and prints out `str` in parentheses. The `B_ASSERT(s)`
+  macro passes `s` to `cond` and its stringification `#s` to `str`.
+  
+* `void beam_clear()` - clears count of all tests and assertions, provided
+  the macro flag `B_KEEP_COUNT` is not set.
+  
+* `size_t beam_pass(const char *file, int line, const char *func, const char *msg)`
+  - signals passing of test, is supposed to be used via the wrapper macro
+    `PASS()` and `PASSm(s)`
+    
+* `size_t beam_fail(const char *file, int line, const char *func, const char *msg)`
+  - signals failing of test, is supposed to be used via the wrapper macro
+    `FAIL()` and `FAILm(s)`
+    
+* `size_t beam_skip(const char *file, int line, const char *func, const char *msg)`
+  - signals failing of test, is supposed to be used via the wrapper macro
+    `SKIP()` and `SKIPm(s)`
