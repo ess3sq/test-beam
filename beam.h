@@ -47,7 +47,7 @@ static const bool b_fail_print =
 #ifndef B_FAIL_SILENTLY
 	true;
 #else
-	true;
+	false;
 #endif
 
 static const bool b_skip_print = 
@@ -127,8 +127,8 @@ bool beam_assert(bool cond, char *str) {
 
 
 #define B_SUMMARY_STR() \
-		".:. (Tests) passed: %ld,  failed: %ld,  skipped: %ld\n" \
-		".:. (Asser) passed: %ld,  failed: %ld\n"
+		".:. (Tests) passed: %lu,  failed: %lu,  skipped: %lu\n" \
+		".:. (Asser) passed: %lu,  failed: %lu\n"
 
 #define B_SUMMARY() \
 		printf(B_SUMMARY_STR() "\n", b_count_passed, b_count_failed, b_count_skipped, b_assert_count_passed, b_assert_count_failed); \
