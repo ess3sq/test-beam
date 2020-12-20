@@ -33,11 +33,11 @@ are recorded in the file [`TODO.md`](https://github.com/ess3sq/test-beam/blob/ma
 
 ## Examples
 
-Examples unit tests can be viewed in the [`examples/`](examples/) directory.
+Examples unit tests can be viewed in the [`examples/`](https://github.com/ess3sq/test-beam/tree/master/examples) directory.
 
 ## Usage
 
-## Inclusion
+### Inclusion
 
 The library consists of a single short header file, containing mostly 
 macros, as well as some `static` global constants and some functions.
